@@ -15,7 +15,7 @@ class App extends Component {
                 {id: 'C', name: 'Cooo'},
                 {id: 'A', name: 'Aooo'}],
       isChecked: "N",
-      isDisable: true,
+      isDisable: false,
       checkedOption: 'A'
     };
     this.setName =this.setName.bind(this);
