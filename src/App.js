@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Grid, Row, Col  } from 'react-bootstrap';
 import User from './User'
 import View from './View'
 
@@ -28,8 +29,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <User setName = {this.setName} setAge = {this.setAge} />
-        <View name = {this.state.name} age={this.state.age}  />
+      <Grid>
+       <Row className="show-grid" style={{margin: "10px"}}>
+         <Col md={4}>
+          <User setName = {this.setName} setAge = {this.setAge} />
+          </Col>
+          <Col md={4}>
+          <View name = {this.state.name} age={this.state.age}  />
+          </Col>
+      </Row>
+      </Grid>
       </div>
     );
   }
